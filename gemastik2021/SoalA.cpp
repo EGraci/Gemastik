@@ -23,6 +23,11 @@ int main(){
 			if(X < 0 || X > 99999){
 				return 0;
 			}else{
+                for(int y = 0; y < N; y++){
+                    if(kupon[y] == X){
+                        return 0;
+                    }
+                }
                 kupon[i] = X;
            }
 		}
