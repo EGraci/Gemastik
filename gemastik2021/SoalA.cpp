@@ -9,7 +9,7 @@ int main(){
 	// n1 <= 1000
 	// X <= 99999
 	// n2 inputan kupon dengan 5 digit
-	int N,X,n2, temp;
+	int N,X,n2;
 	cin>>N>>n2;
 	int kupon[N];
     int seli[N];
@@ -32,14 +32,10 @@ int main(){
            }
 		}
 	}
-
+    int temp = seli[0];
     for(int i = 0; i < N; i++){
         seli[i] = abs(kupon[i] - n2);
-        if(i == 0){
-            temp = seli[i];
-        }else{
             temp = min(temp, seli[i]);
-        }
     }
     //keluaran
     int y = 0;
